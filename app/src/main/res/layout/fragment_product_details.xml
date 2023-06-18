@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.details.ProductDetails"
+    android:background="@color/white">
+
+
+
+    <include
+        android:layout_alignParentTop="true"
+        android:id="@+id/appBar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProduct"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_below="@id/appBar"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp300"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_margin="@dimen/dp5"
+        android:layout_below="@+id/ivProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="@dimen/sp18"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"/>
+
+        <TextView
+            android:fontFamily="@font/inter_bold"
+            android:textSize="@dimen/sp22"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrice"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_margin="@dimen/dp5"
+
+        android:layout_below="@+id/ll1"
+        android:text="Made from best wood and made as as possible for you also the premium design."
+        android:id="@+id/tvInfo"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="@dimen/sp12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_marginHorizontal="@dimen/dp5"
+        android:layout_below="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="Sold 567"
+            android:textColor="#1D2348"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="@dimen/sp16"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSold"/>
+
+        <LinearLayout
+            android:background="@drawable/bg_round_corner"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp18"
+                app:srcCompat="@drawable/ic_star"
+                app:tint="@color/purple_200"/>
+            <TextView
+                android:layout_marginStart="@dimen/dp4"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="@dimen/sp14"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvRating"
+                android:gravity="center"
+                android:text="4.8"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/dp16"
+      android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToCart"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+
+            android:text="Add to Cart"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:fontFamily="@font/inter_medium"
+            style="@style/OutlinedtextStyle" />
+
+        <Space
+            android:layout_width="@dimen/dp16"
+            android:layout_height="match_parent"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuyNow"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Buy Now"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:fontFamily="@font/inter_medium"
+            style="@style/FilledButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>
