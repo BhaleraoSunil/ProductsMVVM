@@ -115,7 +115,6 @@ class FavProducts @Inject constructor(): BaseFragment() {
                     sharedModel.setSelectProduct(productList[position])
                     val fragment = ProductDetails()
                     val bundle = Bundle()
-                    //bundle.putString("profile_id", appSession.user?.user_id)
 
                     fragment.arguments = bundle
                     replaceFragmentWithBack(
