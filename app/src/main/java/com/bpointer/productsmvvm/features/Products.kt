@@ -107,13 +107,13 @@ class Products @Inject constructor() : BaseFragment() {
             when (type){
                 "favorite"->{
                     sharedModel.addFavProduct(productList[position])
-                    showToast("fav")
-                }
-                "addCart"->{
 
                 }
+                "addCart"->{
+                    showToast("Product addred to cart")
+                }
                 else ->{
-                    showToast("details")
+
                     sharedModel.setSelectProduct(productList[position])
                     val fragment = ProductDetails()
                     val bundle = Bundle()

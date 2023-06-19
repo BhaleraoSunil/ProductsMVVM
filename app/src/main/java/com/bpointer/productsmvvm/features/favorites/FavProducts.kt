@@ -111,7 +111,7 @@ class FavProducts @Inject constructor(): BaseFragment() {
                 }
 
                 else ->{
-                    showToast("details")
+
                     sharedModel.setSelectProduct(productList[position])
                     val fragment = ProductDetails()
                     val bundle = Bundle()
